@@ -1,0 +1,663 @@
+/* font  */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Mukta:wght@300;700&family=Poppins&family=Rubik&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  /* scroll-padding: 20rem; */
+}
+
+body {
+  min-height: 100vh;
+  /* background: url("assets/bgim.jpg") no-repeat; */
+  /* background: #d3e3d3; */
+  background: black;
+  background-size: cover;
+  background-position: center;
+  padding-top: 61px;
+}
+
+.background {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    45deg,
+    rgb(0, 0, 0),
+    rgb(41, 41, 60),
+    rgb(0, 0, 0),
+    rgb(41, 41, 60)
+  );
+  background-size: 700% 700%;
+  animation: color 12s ease-in-out infinite;
+  z-index: -999;
+}
+
+@keyframes color {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 100px;
+  background-color: black;
+  opacity: 0.7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.scrolled {
+  background-color: white;
+}
+
+.scrolled > a {
+  color: black;
+}
+
+.scrolled > nav > a {
+  color: black;
+}
+
+.scrolled > nav > a::before {
+  background: black;
+}
+
+.logo {
+  font-size: 30px;
+  /* color: black; */
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+}
+
+.logo:hover {
+  transform: scale(1.04);
+}
+
+.navbar a {
+  color: black;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+  /* color: black; */
+  color: white;
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+
+/* ----------- home ----------- */
+
+.hero {
+  display: flex;
+  /* margin-top: 110px; */
+  justify-content: space-between;
+  /* background: green; */
+  background-size: cover;
+  background-position: center;
+  height: 92vh;
+}
+.hero-text {
+  margin-top: 110px;
+  margin-left: 100px;
+  text-align: left;
+  text-transform: capitalize;
+  z-index: 100;
+}
+
+.hero-text h1 {
+  font-size: 90px;
+  font-weight: 900;
+  /* color: black; */
+  color: white;
+  margin-bottom: 10px;
+}
+
+.hero-text h3 {
+  margin-top: 50px;
+  color: white;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.hero-text a {
+  text-decoration: none;
+}
+
+.hero-text a h3:hover {
+  color: black;
+  border: 2px solid white;
+  background-color: white;
+  border-radius: 50px;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+
+.hero-text p {
+  font-size: 30px;
+  font-weight: 800;
+  /* color: black; */
+  color: white;
+  padding: 20px;
+  text-decoration: underline;
+}
+
+.hero-text h2 {
+  font-size: 35px;
+  font-weight: 800;
+  /* color: black; */
+  color: white;
+}
+
+.hero-image {
+  flex-basis: 40%;
+  margin-top: 60px;
+}
+
+.hero-image img {
+  border-radius: 10px;
+}
+
+.about {
+  margin-top: 61px;
+  /* background: red; */
+  background-size: cover;
+  background-position: center;
+  height: 92vh;
+}
+
+.about-title {
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 50px;
+  color: white;
+}
+
+.about .content {
+  display: flex;
+  margin-left: 300px;
+  margin-right: 100px;
+  margin-top: 60px;
+}
+
+.about-article {
+  width: 600px;
+}
+
+.about-article h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-transform: capitalize;
+  width: 700px;
+  color: white;
+}
+
+.about-article p {
+  width: 500px;
+  font-size: 16px;
+  color: white;
+}
+
+.about-contact {
+  margin-top: 20px;
+  color: white;
+}
+
+.about-contact li {
+  padding: 20px 0;
+  list-style: none;
+  font-size: 16px;
+  /* border-bottom: solid #353b48; */
+  border-bottom: solid white;
+}
+
+.resume {
+  margin-top: 61px;
+  /* background: blue; */
+  background-size: cover;
+  background-position: center;
+}
+
+.resume-title {
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 50px;
+  color: white;
+}
+
+.resume .content {
+  display: flex;
+  margin-left: 160px;
+  margin-top: 50px;
+  justify-content: space-between;
+  color: white;
+}
+
+/* .resume .content h1 {
+  text-align: center;
+} */
+
+.content-experience h1 {
+  margin-left: 150px;
+  margin-bottom: 30px;
+}
+
+.content-education h1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.content-experience {
+  flex-basis: 50%;
+}
+
+.card {
+  width: 500px;
+  height: 125px;
+  padding: 20px;
+  border: 1px solid rgb(181, 181, 181);
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin-top: 10px;
+}
+
+.card h4 {
+  color: grey;
+  font-weight: 100;
+}
+
+.card p span {
+  background-color: grey;
+  padding: 0 5px;
+  border-radius: 4px;
+  color: white;
+}
+
+.skill {
+  padding-bottom: 30px;
+  padding-top: 70px;
+  display: flex;
+}
+.skill h1 {
+  /* margin-top: 70px; */
+  /* margin-bottom: 50px; */
+  /* padding-left: 150px; */
+  text-align: center;
+  color: white;
+}
+
+.hardSkill {
+  width: 800px;
+  /* color: white; */
+  /* margin-right: 200px; */
+}
+
+.hardSkill p {
+  color: black;
+}
+
+.softSkill p {
+  color: black;
+}
+
+.softSkill {
+  width: 800px;
+  /* color: white; */
+  /* padding-top: 200px; */
+}
+
+.space {
+  padding-bottom: 64px;
+}
+
+.skill .content {
+  display: block;
+  margin: 50px;
+  padding: 60px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  /* box-shadow: 5px 5px 40px black; */
+  /* margin: 20px auto; */
+  /* margin-bottom: 200px; */
+}
+
+.progress {
+  width: 100%;
+  height: 20px;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.progress .progress-bar {
+  width: 0%;
+  opacity: 0;
+  height: 100%;
+  background-color: black;
+  border-radius: 10px;
+  position: relative;
+  transition: 5s;
+}
+
+.progress-bar span {
+  position: absolute;
+  font-size: 12px;
+  top: 1px;
+  right: 8px;
+  color: white;
+}
+
+.portofolio {
+  margin-top: 61px;
+  /* background: yellow; */
+  background-size: cover;
+  background-position: center;
+  height: 92vh;
+}
+
+.portofolio-title {
+  text-align: center;
+  margin-bottom: 70px;
+  font-size: 50px;
+  color: white;
+}
+
+.portofolio .content {
+  margin: 0 100px;
+  display: block;
+  box-sizing: border-box;
+  color: white;
+}
+
+.carousel {
+  width: 100%;
+  height: 450px;
+  position: relative;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slide > img {
+  display: block;
+  width: 55%;
+  object-fit: cover;
+  object-position: center;
+  /* margin-left: 448px; */
+  border: 3px solid black;
+  border-radius: 2px;
+}
+
+@keyframes bounceIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-5%);
+    opacity: -2;
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide[data-active] {
+  opacity: 1;
+}
+
+.slide[data-active] img {
+  animation: slideLeft 0.5s;
+}
+
+.slide[data-active] p,
+.slide[data-active] h2 {
+  animation: slideLeft 0.5s;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  top: 225px;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  padding-bottom: 200px;
+  padding-top: 200px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-button:focus {
+  outline: 1px solid black;
+}
+
+.carousel-button.prev {
+  left: 2px;
+}
+
+.carousel-button.next {
+  right: 575px;
+}
+
+.slide-article {
+  padding-top: 90px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgb(26, 26, 26);
+  border-radius: 5px;
+  width: 500px;
+}
+
+.slide-article h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.slide-article > p {
+  font-size: 18px;
+  text-align: center;
+}
+
+#contact {
+  margin-bottom: 61px;
+}
+
+.contact {
+  width: 100%;
+  /* background: grey; */
+  background-size: cover;
+  background-position: center;
+  height: 92vh;
+}
+
+.contact-title {
+  text-align: center;
+  padding-bottom: 40px;
+  font-size: 50px;
+  color: white;
+}
+
+#form {
+  width: 600px;
+  margin: 25px auto 0 auto;
+  padding: 40px;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+#form button {
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  color: white;
+  background-color: rgb(80, 80, 80);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#form button:hover {
+  background-color: rgb(0, 0, 0);
+  transition: 0.2s ease-in-out;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-control label {
+  font-size: 16px;
+}
+
+.input-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
+}
+
+.input-control input:focus {
+  outline: 0;
+}
+
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+  color: #ff3860;
+  font-size: 9px;
+  height: 13px;
+}
+
+.input-control textarea {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
+}
+
+.input-control textarea:focus {
+  outline: 0;
+}
+
+.input-control.success textarea {
+  border-color: #09c372;
+}
+
+.input-control.error textarea {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+  color: #ff3860;
+  font-size: 9px;
+  height: 13px;
+}
+
+.footer {
+  margin-top: 100px;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  padding: 15px 15px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ikon a {
+  padding: 0 30px;
+  text-decoration: none;
+}
+
+.ikon {
+  margin-right: 180px;
+  padding-top: 10px;
+}
+
+.last {
+  padding-top: 24px;
+  padding-right: 10px;
+}
+
+.copyright {
+  padding-top: 24px;
+  padding-left: 5px;
+}
+/* ---------------------------------------------------------------------------------- */
